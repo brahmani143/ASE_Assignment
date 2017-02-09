@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="app.js" type="application/javascript">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            background: url(http://wallpoper.com/images/00/44/89/52/black-background-metal-hole-very-small_00448952.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            padding-top:70px;
+        }
+
+        .panel-default {
+            opacity: 0.9;
+            margin-top:100px;
+            ali
+        }
+        .form-group.last { margin-bottom:0px; }
+
+    </style>
+
+
+</head>
+<body>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-lock"></span> Login</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">
+                                Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">
+                                Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button  onclick ="location.href = 'http://localhost:63342/lab%202/mashup.html?_ijt=7sok7nrubpcsejjfd0hm5akqhh'" type="button" class="btn btn-success btn-sm">
+                                    Sign in</button>
+                                <button onclick="location.href = 'http://localhost:63342/lab%202/Registration.html?_ijt=7sok7nrubpcsejjfd0hm5akqhh';"type="button" class="btn btn-default btn-sm">
+                                    Register</button>
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9" style="padding-top:10px;">
+                                <p><a  id="facebookLogin" class="btn btn-primary btn-lg btn-facebook" onclick="login(); return false;" href="#" role="button">Facebook</a></p>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+
+    function  login() {
+        FB.login(function (response) {
+            if (response.status === 'connected') {
+                self.location="mashup.html";
+                document.getElementById('status').innerHTML = 'We are connected to FaceBook';
+            } else if (response.status === 'not_authorized') {
+                document.getElementById('status').innerHTML = 'We are not connected to FaceBook';
+            } else{
+                document.getElementById('status').innerHTML = 'We are not logged into FaceBook';
+            }
+        });
+    }
+</script>
+</html>
