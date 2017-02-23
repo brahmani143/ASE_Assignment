@@ -1,0 +1,7 @@
+#Wed Feb 22 23:14:16 CST 2017
+base.0=C\:\\Users\\bkani\\Desktop\\GoogleMapsApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_411242fcc8cee7ed55d9235ecf878c17d806469d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\bkani\\Desktop\\GoogleMapsApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8f41a507faa9fa66fd650fa6504cde6f3d670580\\classes.dex
+base.1=C\:\\Users\\bkani\\Desktop\\GoogleMapsApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8f41a507faa9fa66fd650fa6504cde6f3d670580
+file.0=C\:\\Users\\bkani\\Desktop\\GoogleMapsApplication\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_411242fcc8cee7ed55d9235ecf878c17d806469d\\classes.dex
