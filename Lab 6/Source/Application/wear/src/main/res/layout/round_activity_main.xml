@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bkani.application.MainActivity"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginTop="19dp"
+        android:id="@+id/first" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="Classify"
+        android:onClick="translateText"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/edit1"
+        android:layout_alignStart="@+id/edit1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter the text to classify tone "
+        android:ems="10"
+        android:layout_marginTop="73dp"
+        android:id="@+id/edit1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp" />
+
+</RelativeLayout>
