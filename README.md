@@ -15,4 +15,7 @@ WIKI Page Link: https://github.com/brahmani143/ASE_Assignment/wiki/Lab-Assignmen
 ##Lab--5
 WIKI Page Link :https://github.com/brahmani143/ASE_Assignment/wiki/Lab-Assignment-5
 
+##Lab--6
+WIKI Page Link : https://github.com/brahmani143/ASE_Assignment/wiki/Lab--Assignment-6
+
 
