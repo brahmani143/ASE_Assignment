@@ -1,0 +1,27 @@
+.ht{
+    background-image: url(sample.jpg);
+    font-family: sans-serif;
+}
+div.body{
+
+    margin-top: 100px;
+    }
+div.body1{
+    margin-left: 70px;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+select.ba{
+   
+    color: black;
+}
+
+.come{
+    
+    color: black;
+}
+h1.head{
+    
+    text-transform: uppercase;
+}

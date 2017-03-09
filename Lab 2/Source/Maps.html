@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+
 <html lang="" data-ng-app="GoogleDirection">
 <head>
   <meta t="utf-8">
@@ -23,16 +24,10 @@
 
 <body>
 
-<div class="wrapp" ng-controller="googlemapoutput">
+<d
+iv class="wrapp" ng-controller="googlemapoutput">
          <div class="row">
-                <input type="text"  ng-model="startlocation" id="startlocation"/>
-                <input type="text"  ng-model="endlocation" id="endlocation" /> <br></br>
-				
-				               <button id="btn" ng-click="calcRoute()">
-                    Get Direction
-                </button>
-                 <br/></br>
-            </div>
+             
 			
 			 <button id="btn" ng-click="getWeather()"> Show Weather </button>
   <br/>
@@ -47,7 +42,7 @@
     
   </div>
   
-            <div id="map-canvas" style="height: 400px;"></div>
+            
         </div>
     </body>
 </html>
@@ -57,96 +52,33 @@
 angular.module('GoogleDirection', [])
 .controller('googlemapoutput', function ($scope, $http) {
 
-    var map;
-    var mapOptions;
-    var directionsDisplay = new google.maps.DirectionsRenderer({
-        draggable: true
-    });
-    var directionsService = new google.maps.DirectionsService();
-
-    $scope.initialize = function () {
-          var pos = new google.maps.LatLng(0, 0); 
-          var mapOptions = {
-                zoom: 3,
-                center: pos
-            };
-			
-			
-             map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-			var originInput = document.getElementById('startlocation');
-  var destinationInput = document.getElementById('endlocation');
-			var originAutocomplete = new google.maps.places.Autocomplete(
-      originInput);
-  var destinationAutocomplete = new google.maps.places.Autocomplete(
-      destinationInput);
-	   originAutocomplete.bindTo('bounds', map);
-	   estinationAutocomplete.bindTo('bounds', map);
-
-			
-			
-     };
-	 
-
+    
 
 	 $scope.getWeather = function() {
 	alert("hello");
 	
 	
-     $http.get('http://api.openweathermap.org/data/2.5/weather?q='+$scope.startlocation+'&APPID=80584970535064300f112ac148c702fd').success(function(data) {
+     $http.get('http://www.mapmyfitness.com/workout/calculate/calories/?measurement_units=metric&weight=55&height=0.169&age=24&sex=F&activity_type=11&distance=1&duration=3600').success(function(data) {
         console.log(data);
-         x = data.main.temp;
-		 nature = data.weather[0].description;
-		 icon1= data.weather[0].icon;
+        
+		 nature = data.status;
 		 
-		temp= Math.round(x-272.15);
 		
  
  console.log(temp);
-		document.getElementById("weatherinfo").innerHTML =  "Temperature at " +$scope.startlocation+ " is "+temp+" &deg; c "+nature+" ";
-                 document.getElementById("brahmani") ="<img src='http://openweathermap.org/img/w/" + icon1+  ".png'>"
+ alert("hey");
+		document.getElementById("weatherinfo").innerHTML =  nature;
+                 
       
        
 
       })
 	  
-	  $http.get('http://api.openweathermap.org/data/2.5/weather?q='+$scope.endlocation+'&APPID=80584970535064300f112ac148c702fd').success(function(data) {
-        console.log(data);
-         y = data.main.temp;
-		 nature2 = data.weather[0].description;
-		temp2 = Math.round(y-272);
-        console.log(temp2);
-		document.getElementById("weatherinfo2").innerHTML =  "Temperature at " +$scope.endlocation+ " is "+temp2+" &deg; c "   +nature2+" ";
-                        
-        
-       
-
-      })
+	  
     }
 	 
 	 
-    $scope.calcRoute = function () {
-       var end = document.getElementById('endlocation').value;
-            var start = document.getElementById('startlocation').value;
-
-            var request = {
-                origin: start,
-                destination: end,
-                travelMode: google.maps.TravelMode.DRIVING
-            };
-
-            directionsService.route(request, function (response, status) {
-                if (status == google.maps.DirectionsStatus.OK) {
-                    directionsDisplay.setMap(map);
-                    directionsDisplay.setDirections(response);
-                    console.log(status);
-                }
-           
-        });
-    };
-
-    google.maps.event.addDomListener(window, 'load', $scope.initialize);
-
+   
 });
 
 
