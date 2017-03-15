@@ -20,14 +20,14 @@ angular.module('myApp', [])
                 alert("hello");
                 document.getElementById('div_ReviewList').style.display = 'none';
                 //This is the API that gives the list of venues based on the place and search query.
-                $http.get('https://api.themoviedb.org/3/search/movie?api_key=75d8861e5751a73c0dfb4b17215c95ab&query='+placeEntered+'').success(function (data) {
+                $http.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=gym&key=AIzaSyCNt-ShhFX0jz3fNOKF1D1XcEV-L6j18cI').success(function (data) {
                     alert(data.results[0].original_title);
                     if (data != null && data.results != null ) {
                         for (var i = 0; i < data.results.length; i++) {
                             $scope.results[i] = {
-                                "name": data.results[i].original_title,
+                                "name": data.results[i].name,
 
-                                "id": data.results[i].id
+                                "id": data.results[i].vicinity
                             };
                         }
                     }
