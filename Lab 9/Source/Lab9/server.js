@@ -1,6 +1,4 @@
-/**
- * Created by Megha Nagabhushan on 10/23/2016.
- */
+
 
 var http = require('http');
 var fs = require("fs");
