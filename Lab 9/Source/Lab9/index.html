@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <style>
+
+        .menu input{
+      width: 300px;
+      background: transparent;
+      border: 2px solid #599bb3;
+      border-radius: 4px;
+      color: #5e5e5e;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 6px;
+      margin-top: 10px;
+          margin-left:250px;
+    }
+    .menu button{
+        width: 200px;
+        height:40px;
+        background:#599bb3;
+        border:  2px solid #ffffff;
+        cursor: pointer;
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: 'Exo', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 6px;
+        margin-top: 10px;
+    }
+        table {
+            max-width: 960px;
+            margin: 10px auto;
+            border: 1px solid #FFF;
+        }
+
+        caption {
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        thead th {
+            font-weight: 400;
+            background: #8a97a0;
+            color: #FFF;
+        }
+
+        tr {
+            background: #f4f7f8;
+            border: 1px solid #FFF;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #e8eeef;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #8a97a0;
+        }
+
+    .body{
+      background-image: url("https://imgoing.iti-marketing.com/images/new_placeholder_image.jpg");
+    }
+  </style>
+
+</head>
+<body class="body">
+
+
+  <div  ng-controller="topVideosCtrl" style="top: 200px">
+    <div class="menu" id="div_SearchContainer">
+    <input type="text" id="queryName" placeholder="Enter the name of the movie"/>
+    <button id="btn_search" ng-click="videoSearch()">Get Videos</button>
+    <button id="btn_wiki" ng-click="infoSearch()">Get information</button>
+    </div>
+    <div id="div_VenueList">
+      <h2 style="text-align: center; color: #599bb3"> Videos </h2>
+      <ul>
+       <li ng-repeat="i in videos" style="font-size: x-large; color: #5e5e5e; text-align: center; list-style: none; list-style-position:inside;">
+          <a  href="" ng-click="www.youtube.com/embed/{{i.id.videoId}}" style="font-size: x-large; color:palevioletred; text-align: center;">{{i.snippet.title}}</a>
+        <h5>{{i.snippet.description}}</h5>
+        </li>
+      </ul>
+
+    </div>
+  <div>
+<h2 style="text-align: center; color: #599bb3"> Movie information </h2>
+<div id="div_movieList" style="display: none">
+  <h5> <span style="font-size:22px;color:darkmagenta">Movie Title</span>  : <span style="font-size: 15px">{{movietitle}}</span></h5>
+  <h5><span style="font-size:22px;color:darkmagenta">Movie Actors </span>: <span style="font-size: 15px">{{movieactors}}</span><</h5>
+  <h5><span style="font-size:22px;color:darkmagenta">Movie Plot</span> : <span style="font-size: 15px">{{movieplot}}</span></h5>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script></div>
+
+  </div>
+</body>
+</html>
