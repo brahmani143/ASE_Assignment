@@ -1,6 +1,4 @@
-/**
- * Created by sibi on 10/29/2016.
- */
+
 
 var app = angular.module('demoMongo',[]);
 app.run(function ($http) {
